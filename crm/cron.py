@@ -17,7 +17,7 @@ def log_crm_heartbeat():
 
     # Execute the query (optional, to verify endpoint responsiveness)
     try:
-        client.execute(query)
+        response = client.execute(query)
     except Exception:
         pass  # Query is optional, so silently handle failures
 
