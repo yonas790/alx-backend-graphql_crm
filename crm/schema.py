@@ -38,6 +38,6 @@ class Mutation(graphene.ObjectType):
     update_low_stock_products = UpdateLowStockProducts.Field()
 
 class Query(graphene.ObjectType):
-    hello = graphene.String(default_value="Hi!")  # Existing query for heartbeat task
+    hello = graphene.String(default_value="Hi!")  # For log_crm_heartbeat
 
 schema = graphene.Schema(query=Query, mutation=Mutation)

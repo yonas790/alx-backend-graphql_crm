@@ -1,11 +1,11 @@
 from gql import gql, Client
-from gql.transport.aiohttp import AIOHTTPTransport
+from gql.transport.requests import RequestsHTTPTransport
 from datetime import datetime
 import pytz
 
 def log_crm_heartbeat():
-    # Set up GraphQL client
-    transport = AIOHTTPTransport(url="http://localhost:8000/graphql")
+    # Set up GraphQL client with RequestsHTTPTransport
+    transport = RequestsHTTPTransport(url="http://localhost:8000/graphql")
     client = Client(transport=transport, fetch_schema_from_transport=True)
 
     # Define GraphQL query for hello field
@@ -31,8 +31,8 @@ def log_crm_heartbeat():
         log_file.write(f"{timestamp} CRM is alive\n")
 
 def update_low_stock():
-    # Set up GraphQL client
-    transport = AIOHTTPTransport(url="http://localhost:8000/graphql")
+    # Set up GraphQL client with RequestsHTTPTransport
+    transport = RequestsHTTPTransport(url="http://localhost:8000/graphql")
     client = Client(transport=transport, fetch_schema_from_transport=True)
 
     # Define GraphQL mutation for updating low-stock products
