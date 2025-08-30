@@ -3,3 +3,6 @@ graphene-django>=2.15.0
 gql>=3.0.0
 requests>=2.26.0
 django-crontab>=0.7.1
+celery
+django-celery-beat
+redis
