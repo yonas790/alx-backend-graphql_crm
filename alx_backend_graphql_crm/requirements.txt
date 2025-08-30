@@ -1,5 +1,5 @@
 django>=3.2
+graphene-django>=2.15.0
 gql>=3.0.0
-aiohttp>=3.8.0
+requests>=2.26.0
 django-crontab>=0.7.1
-django>=3.2 graphene-django>=2.15.0 gql>=3.0.0 aiohttp>=3.8.0 django-crontab>=0.7.1
